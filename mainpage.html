@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keebs</title>
+    <link rel="stylesheet" href="styles/style_main.css">
+    
+</head>
+<body>
+<div class="topnav">
+  <a class="active" href="mainpage.html" style="border-radius:5px">Keebs.inc</a>
+  <input type="text" placeholder="Search...">
+    <div class="topnav-right">
+      <a href="mainpage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ⬎</button>
+          <div class="dropdown-content">
+            <a href="products.html">• All Products</a>
+            <a href="switches.html">• Switches &nbsp; &nbsp;</a>
+            <a href="accessories.html">• Accessories</a>
+            <a href="keyboards.html">• Keyboards</a>
+          </div>
+      </div> 
+          <a href="login.html">Login</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="cart.html"><img src="images\shoppingcart.png" style="width:30px;height:30px;padding-top: 8px;padding-left: 2px;padding-right: 2px;"></a>
+    </div>
+</div>
+    
+<div class="slideshow-container">
+  <div class="slides fade">
+    <div class="numbertext"></div>
+    <a href="switches.html"><img src="images/switchpng.png" style="width:100%;height:610px;"></a>
+    <div class="text">Switches</div>
+  </div>
+
+  <div class="slides fade">
+    <div class="numbertext"></div>
+    <a href="keyboards.html"><img src="images/board.png" style="width:100%;height:610px;"></a>
+    <div class="text">Keyboards</div>
+  </div>
+        
+  <div class="slides fade">
+    <div class="numbertext"></div>
+    <a href="accessories.html"><img src="images/pad.png" style="width:100%;height:610px;"></a>
+    <div class="text">Accessories</div>
+  </div>
+</div>
+
+<br>
+      
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+      
+<script>
+  let slideIndex = 0;
+  showSlides();
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("slides");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 4000); 
+  }
+</script>
+
+<button onclick="topFunction()" id="backtop" title="Go to top">↑</button>
+<script>
+  let mybutton = document.getElementById("backtop");
+  window.onscroll = function() {scrollFunction()};    
+  function scrollFunction() {
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+<hr style="background-color:gray;width:99%;opacity:0.2;margin-top: 20px;">
+<div class="textdesc">“Uttering a word is like striking a note on the keyboard of the imagination.”― Ludwig Wittgenstei <br>
+</div>
+<div class="textdesc">Here at Keebs, we strive to provide you with the most stellar of experiences while building or purchasing your very own meachnical keyboard.<br></div>
+<div class="textdesc">Our partnership with the Cherry ensures that we can provide the best prices on the market while maintaining strict quality assurance.</div>
+<div class="txtdescbold"><i>Prouldly partnered with:</i></div>
+<img src="images/cherry.png" style="display: block;margin-left: auto;margin-right: auto;width: 50%;border-radius: 25px;margin-bottom: 25px;">
+</body>
+</html>

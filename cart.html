@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="stylesheet" href="styles/style_products.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="mainpage.html" style="border-radius:5px">Keebs.inc</a>
+  <input type="text" placeholder="Search...">
+    <div class="topnav-right">
+      <a href="mainpage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ⬎</button>
+          <div class="dropdown-content">
+            <a href="products.html">• All Products</a>
+            <a href="switches.html">• Switches &nbsp; &nbsp;</a>
+            <a href="accessories.html">• Accessories</a>
+            <a href="keyboards.html">• Keyboards</a>
+          </div>
+        </div> 
+          <a href="login.html">Login</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="cart.html"><img src="images\shoppingcart.png" style="width:30px;height:30px;padding-top: 8px;padding-left: 2px;padding-right: 2px;"></a>
+        </div>
+</div>
+
+<div class="title">Your Cart</div>
+
+<div class="product-container">
+  <div class="card">
+    <div class="product-title">CHERRY G80-3000N</div>
+      <div class="product-image">
+      <img src="images/G80-3000N.jpg" style="width:200px;height: 180px;">
+      </div>
+    <div class="desctext">
+        <ul>
+          <li>RM300/PCS</li>
+          <li>2 Year Warranty</li>
+          <li>Shippping Foam Inclusive</li>
+        </ul>
+        &nbsp; &nbsp; Ammount
+    </div>    
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <form class="form-select">
+      <select id="Ammount" name="ammount" class="select">
+      <option value="1">Red Switch</option>
+      <option value="2">Blue Switch</option>
+      <option value="3">Brown Switch</option>
+      </select>
+  </form>
+    <button class="button button1" onclick="addtocart()">Remove Item</button>
+  </div>
+
+  <div class="card">
+    <div class="product-title">Cherry MX Blue Switches</div>
+      <div class="product-image">
+      <img src="images/cherrymxblue.png" style="width:200px;height: 180px;">
+      </div>
+    <div class="desctext">
+        <ul>
+          <li>RM200 Per Pack</li>
+          <li>120 PCS per pack</li>
+        </ul>
+        &nbsp; &nbsp; Ammount:
+    </div>
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Remove Item</button>
+  </div>
+</div>
+
+<div class="card" style="padding-top:20px">
+  <div class="product-title">Summary</div>
+  <div class="desctext" style="text-align:center">
+    <div style="font-size:x-large">Subtotal: <b>RM 500</b></div>
+    <div style="font-size:large">Items in cart: <b>2</b></div>
+  </div>
+  <button class="button button1" onclick="checkout()">&nbsp; &nbsp;&nbsp; &nbsp;Proceed to checkout&nbsp; &nbsp;&nbsp; &nbsp;</button>
+</div>
+</div>
+
+<script>
+  function addtocart() {
+    alert("Item Removed");
+  }
+
+  function checkout() {
+    setTimeout(myURL, 5000);
+    var result = alert("Thank you for your purchase, redirecting back to home page.....");
+    
+  }
+
+  function myURL() {
+    document.location.href = "mainpage.html";
+  }
+</script>
+
+
+
+

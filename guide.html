@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keebs</title>
+    <link rel="stylesheet" href="styles/style_guide.css">
+    
+</head>
+<body>
+<div class="topnav">
+  <a class="active" href="mainpage.html" style="border-radius:5px">Keebs.inc</a>
+  <input type="text" placeholder="Search...">
+    <div class="topnav-right">
+      <a href="mainpage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ⬎</button>
+          <div class="dropdown-content">
+            <a href="products.html">• All Products</a>
+            <a href="switches.html">• Switches &nbsp; &nbsp;</a>
+            <a href="accessories.html">• Accessories</a>
+            <a href="keyboards.html">• Keyboards</a>
+          </div>
+      </div> 
+          <a href="login.html">Login</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="cart.html"><img src="images\shoppingcart.png" style="width:30px;height:30px;padding-top: 8px;padding-left: 2px;padding-right: 2px;"></a>
+    </div>
+</div>
+
+<div class="txtdescbold">Having problems choosing a switch? We got you.</div>
+
+<div class="textdesc">Choosing a switch for your keeb can be very difficult due to the different characteristics each switch hsa, but rest assured, we are here to help.</div>
+<div class="textdesc">The table below briefly summarizes the differences between the three most common swithces, it you still can't make a decision, feel free to refer to the videos down below. The videos provide more detailed explanations for each switch.</div>
+<div class="containertable">
+    <table style="border: 1px solid white;margin-left: auto;margin-right: auto;">
+      <tr>
+        <th>Switch Type</th>
+        <th>Response Style</th>
+        <th>Actuation Point</th>
+        <th>Durability</th>
+      </tr>
+      <tr>
+        <td><img src="images/cherrymxred.png" style="width:10%;height:10%"> Red Switches</td>
+        <td>Linear & Quiet</td>
+        <td>Suitable for gamers</td>
+        <td>50 million</td>
+      </tr>
+      <tr>
+        <td><img src="images/cherrymxblue.png" style="width:10%;height:10%"> BLue Switches</td>
+        <td>Tactile & Clicky</td>
+        <td>Suitable for typists</td>
+        <td>50 million</td>
+      </tr>
+      <tr>
+        <td><img src="images/cherrymxbrown.png" style="width:10%;height:10%"> Brown Switches</td>
+        <td>Tactile & Quiet</td>
+        <td>Suitable for typists and gamers</td>
+        <td>50 million</td>
+      </tr>
+    </table>
+</div>
+
+<div class="videoWrapper">
+    <iframe width="560" height="349" src="https://www.youtube.com/embed/mf2eracUeGQ" frameborder="0" allowfullscreen>
+    </iframe>
+</div>
+
+<button onclick="topFunction()" id="backtop" title="Go to top">↑</button>
+<script>
+  let mybutton = document.getElementById("backtop");
+  window.onscroll = function() {scrollFunction()};    
+  function scrollFunction() {
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_aboutus.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="mainpage.html" style="border-radius:5px">Keebs.inc</a>
+  <input type="texts" placeholder="Search...">
+    <div class="topnav-right">
+      <a href="mainpage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ⬎</button>
+          <div class="dropdown-content">
+            <a href="products.html">• All Products</a>
+            <a href="switches.html">• Switches &nbsp; &nbsp;</a>
+            <a href="accessories.html">• Accessories</a>
+            <a href="keyboards.html">• Keyboards</a>
+          </div>
+        </div> 
+          <a href="login.html">Login</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="cart.html"><img src="images\shoppingcart.png" style="width:30px;height:30px;padding-top: 8px;padding-left: 2px;padding-right: 2px;"></a>
+        </div>
+</div>
+
+<div>
+  <h2 class="textdesc">We are Keebs, a company which specializes in mechanical keyboards and it's accessiories.<br>
+                      Founded in 2022, we are based in Malaysia and sought to provide you with the best of experiences while building or purchasing a keyboard.</h3>
+</div>
+
+<div>
+  <h2 class="textdesc">Our company originates from a slang, with people naming their keybaord their 'keeb', which was where our company name was born :<br> 
+                      <div class="txtdescbold"><b><i>Keebs<small><small><small><small>.inc</small></small></small></small></i></div>
+  </h2>
+</div>
+  
+<div>
+  <h2 class="textdesc">Feel free to provide your feedback via in the form below or contact us at <b>keebs@gmail.com.my</b><br>
+                        We truly treasure your precious feedback as it helps to imporve.</h3>
+</div>
+
+<div>
+  <h2 class="textdesc">If you feel like you need a guide to choose what switch for your build or keyboard, we also provide a  page with suitable guides <strong><a href=guide.html>here</a></strong>
+</div>
+
+<div class="scroll">˅</div>
+
+<div class="title">Feedback</h3>
+
+<div class="container">
+  <form name="regform" method="post" onsubmit="success()">
+    <label for="name"> Name</label>
+    <input type="text" id="name" name="name" required placeholder="Enter your name">
+
+    <label for="email">E-mail</label>
+    <input type="text" id="email" required name="email" pattern=".*@gmail.com" placeholder="Enter Email -- format: somebody@gmail.com">
+
+    <label for="satisfied">On a scale of 1-5, how much are you satisfied with our website?</label>
+    <select id="satisifed" name="satisfied">
+      <option value="1">1 - Extremely Unsatisfied</option>
+      <option value="2">2 - Unsatisfied</option>
+      <option value="3">3 - Neutral</option>
+      <option value="4">4 - Satisfied</option>
+      <option value="5">5 - Extremely Satisfied</option>
+    </select>
+
+    <label for="feedback">Feedback</label>
+    <textarea id="feedback" name="feedback" required maxlength="700" placeholder="&nbsp;&nbsp;Enter Feedback" style="height:200px;width:700px;color:white"></textarea>
+
+
+    <input type="submit" value="Submit">  
+  </form>
+</div>
+
+<script>
+  function success(){
+    alert("Thanks for your feedback! We appreciate it!")
+  }
+</script>
+
+<button onclick="topFunction()" id="backtop" title="Go to top">↑</button>
+<script>
+  let mybutton = document.getElementById("backtop");
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+</script>
+</body>
+</html>

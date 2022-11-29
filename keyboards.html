@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="stylesheet" href="styles/style_products.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="mainpage.html" style="border-radius:5px">Keebs.inc</a>
+  <input type="text" placeholder="Search...">
+    <div class="topnav-right">
+      <a href="mainpage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ⬎</button>
+          <div class="dropdown-content">
+            <a href="products.html">• All Products</a>
+            <a href="switches.html">• Switches &nbsp; &nbsp;</a>
+            <a href="accessories.html">• Accessories</a>
+            <a href="keyboards.html">• Keyboards</a>
+          </div>
+        </div> 
+          <a href="login.html">Login</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="cart.html"><img src="images\shoppingcart.png" style="width:30px;height:30px;padding-top: 8px;padding-left: 2px;padding-right: 2px;"></a>
+        </div>
+</div>
+
+<button onclick="topFunction()" id="backtop" title="Go to top">↑</button>
+<script>
+  let mybutton = document.getElementById("backtop");
+  window.onscroll = function() {scrollFunction()};
+  function scrollFunction(){
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  }else{
+    mybutton.style.display = "none";
+    }
+  }
+  function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+<div class="title">Keyboards</div>
+
+<div class="product-container">
+  <div class="card">
+    <div class="product-title">G80-3000N RGB TKL</div>
+      <div class="product-image">
+      <img src="images/G80-3000NTKL.jpg" style="width:200px;height: 150px;">
+      </div>
+    <div class="desctext">
+      <ul>
+        <li>No numpad</li>
+        <li>Portable Wired Keyboard</li>
+        <li>Blue, Brown and Red Switches Available</li>
+    </ul>
+    </div>
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Add to cart</button>
+  </div>
+
+  <div class="card">
+    <div class="product-title">CHERRY MX 10.0N RGB</div>
+      <div class="product-image">
+      <img src="images/MX100N.jpg" style="width:200px;height: 150px;">
+      </div>
+    <div class="desctext">
+      <ul>
+        <li>Suitable for gaming</li>
+        <li>Extremely durable base</li>
+        <li>5 Year Warranty</li>
+    </ul>
+    </div>
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Add to cart</button>
+  </div>
+  <div class="card">
+    <div class="product-title">CHERRY MX BOARD 1.0TKL</div>
+      <div class="product-image">
+      <img src="images/mxboard1.0.jpg" style="width:200px;height: 150px;">
+      </div>
+    <div class="desctext">
+      <ul>
+        <li>70% Size</li>
+        <li>Portable & Durable</li>
+        <li>5 Year Warranty</li>
+    </ul>
+    </div>
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Add to cart</button>
+  </div>
+
+  <div class="card">
+    <div class="product-title">CHERRY MX Board 9.0</div>
+      <div class="product-image">
+      <img src="images/mxboard9.0.jpg" style="width:200px;height: 150px;">
+      </div>
+    <div class="desctext">
+      <ul>
+        <li>Classic Design</li>
+        <li>Made for games</li>
+        <li>Hotswappable Housing</li>
+      </ul>
+    </div>
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Add to cart</button>
+  </div>
+</div>
+
+<script>
+  function addtocart() {
+    alert("Item added to shopping cart :)");
+  }
+</script>
+</body>
+</html>

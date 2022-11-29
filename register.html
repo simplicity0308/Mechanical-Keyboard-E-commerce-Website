@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="stylesheet" href="styles/style_register.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="mainpage.html" style="border-radius:5px">Keebs.inc</a>
+  <input type="texts" placeholder="Search...">
+    <div class="topnav-right">
+      <a href="mainpage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ⬎</button>
+          <div class="dropdown-content">
+            <a href="products.html">• All Products</a>
+            <a href="switches.html">• Switches &nbsp; &nbsp;</a>
+            <a href="accessories.html">• Accessories</a>
+            <a href="keyboards.html">• Keyboards</a>
+          </div>
+        </div> 
+          <a href="login.html">Login</a>
+          <a href="aboutus.html">About Us</a>
+          <a href="cart.html"><img src="images\shoppingcart.png" style="width:30px;height:30px;padding-top: 8px;padding-left: 2px;padding-right: 2px;"></a>
+        </div>
+</div>
+
+<button onclick="topFunction()" id="backtop" title="Go to top">↑</button>
+<script>
+      let mybutton = document.getElementById("backtop");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+      }
+      
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+</script>
+
+<div class="title">Register As Member</div>
+<div class="container">
+  <form name="regform" method="post" onsubmit="validateform()">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Enter your first name">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Enter your last name">
+
+    <label for="pw">Password</label>
+    <input type="password" id="pw" name="password" placeholder="Enter your password, at least one lowercase and uppercase letter and a number">
+
+    <label for="email">E-mail</label>
+    <input type="text" id="email" name="email"  placeholder="Enter Email -- format: somebody@gmail.com">
+    
+    <label for="pn">Phone Number</label>
+    <input type="number" id="pn" name="phonenumber" placeholder="Enter your phone number">
+
+    <label for="sa">Shipping Address</label>
+    <input type="text" id="sa" name="address" placeholder="Enter your default shipping address">
+
+    <label for="cd">Postal Code</label>
+    <input type="number" id="cd" name="code" placeholder="Enter your postal code">
+
+    <label for="gender">Choose your gender</label>
+    <select id="satisifed" name="satisfied">
+      <option value="m">Male</option>
+      <option value="f">Female</option>
+      <option value="rns">Rather not say</option>
+    </select>
+
+    <label for="nl">Our newsletter will provide the latest market news via email</label>
+    <input type="checkbox"id="nl" name="nl"> &nbsp;Subscribe to our newsletter<span></span>
+    <input type="submit" value="Submit">  
+  </form>
+</div>
+</body>
+
+<script>
+  function validateform(){
+
+  var fn=document.forms["regform"]["firstname"].value;
+  var ln=document.forms["regform"]["lastname"].value;
+  var em=document.forms["regform"]["email"].value;
+  var pn=document.forms["regform"]["phonenumber"].value;
+  var sa=document.forms["regform"]["address"].value;
+  var cd=document.forms["regform"]["code"].value;
+  var pw=document.forms["regform"]["password"].value;
+
+  if(fn==null||fn==""){
+    alert("First name cannot be blank!");
+    document.regform.firstname.focus();
+    return false;
+  }else if(ln==null||ln==""){
+    alert("Last name cannot be blank!");
+    document.regform.lastname.focus();
+    return false;
+  }else if(pw==null||pw==""){
+    alert("Password cannot be blank!");
+    document.regform.password.focus();
+    return false;  
+  }else if(em==null||em==""){
+    alert("E-mail cannot be blank!");
+    document.regform.email.focus();
+    return false;
+  }else if(pn==null||pn==""){
+    alert("Phone number cannot be blank!");
+    document.regform.phonenumber.focus();
+    return false;
+  }else if(sa==null||sa==""){
+    alert("Please enter your address!");
+    document.regform.address.focus();
+    return false;
+  }else if(cd==null||cd==""){
+    alert("Please enter your postal code!");
+    document.regform.code.focus();
+    return false;
+  }else{
+    validatepassword();
+  }
+  }
+
+  function validatepassword(password){
+
+    var lowerCaseLetters = /[a-z]/g;
+    var upperCaseLetters = /[A-Z]/g;
+    var numbers = /[0-9]/g;
+    var pw=document.forms["regform"]["password"].value;
+ 
+     if(pw.match(lowerCaseLetters)){
+    }else{
+      alert("Password must include at least one lower case letter!");
+      document.regform.password.focus();
+      return false;
+    }
+    if(pw.match(upperCaseLetters)){
+    }else{
+      alert("Password must include at least one upper case letter!");
+      document.regform.password.focus();
+      return false;
+    } 
+    if(pw.match(numbers)){
+      validateemail();
+    }else{
+      alert("Password must have at least one number!")
+      document.regform.password.focus();
+      return false;
+    }    
+    
+  }
+  
+  function validateemail(email){
+  var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  var em=document.forms["regform"]["email"].value;
+  if(em.match(mailformat)){
+    setTimeout(myURL, 1000);
+    var result = alert("Registration Successful! Redirecting back to home page.....");
+    return true;
+  }else{
+    alert("Invalid email address!");
+    document.regform.email.focus();
+    return false;
+    } 
+  }
+
+  function myURL() {
+  document.location.href = "mainpage.html";
+  }  
+</script>

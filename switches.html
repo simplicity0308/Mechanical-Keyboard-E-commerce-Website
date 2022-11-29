@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products</title>
+    <link rel="stylesheet" href="styles/style_products.css">
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="mainpage.html" style="border-radius:5px">Keebs.in</a>
+  <input type="text" placeholder="Search...">
+    <div class="topnav-right">
+      <a href="mainpage.html">Home</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ⬎</button>
+        <div class="dropdown-content">
+          <a href="products.html">• All Products</a>
+          <a href="switches.html">• Switches &nbsp; &nbsp;</a>
+          <a href="accessories.html">• Accessories</a>
+          <a href="keyboards.html">• Keyboards</a>
+        </div>
+      </div> 
+        <a href="login.html">Login</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="cart.html"><img src="images\shoppingcart.png" style="width:30px;height:30px;padding-top: 8px;padding-left: 2px;padding-right: 2px;"></a>
+    </div>
+</div>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">↑</button>
+<script>
+      let mybutton = document.getElementById("myBtn");
+      window.onscroll = function() {scrollFunction()};
+      function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+      }
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+</script>
+
+<div class="title">Switches</div>
+
+<div class="product-container">
+<div class="card">
+    <div class="product-title">Cherry MX Blue Switches</div>
+      <div class="product-image">
+      <img src="images/cherrymxblue.png" style="width:200px;height: 180px;">
+      </div>
+    <div class="desctext">
+        <ul>
+          <li>Clicky and Noticeable</li>
+          <li>60cN operating force</li>
+          <li>4mm total travel</li>
+        </ul>
+        &nbsp; &nbsp; 120 switches per pack
+    </div>    
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Add to cart</button>
+  </div>
+
+  <div class="card">
+    <div class="product-title">Cherry MX Brown Switches</div>
+      <div class="product-image">
+      <img src="images/cherrymxbrown.png" style="width:200px;height: 180px;">
+      </div>
+    <div class="desctext">
+      <ul>
+        <li>Focused and Noticeable</li>
+        <li>55cN operating force</li>
+        <li>4mm total travel</li>
+    </ul>
+    &nbsp; &nbsp; 120 switches per pack
+    </div>
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Add to cart</button>
+  </div>
+
+  <div class="card">
+    <div class="product-title">Cherry MX Red Switches</div>
+      <div class="product-image">
+      <img src="images/cherrymxred.png" style="width:200px;height: 180px;">
+      </div>
+    <div class="desctext">
+      <ul>
+        <li>Smooth and Direct</li>
+        <li>45cN operating force</li>
+        <li>4mm total travel</li>
+    </ul>
+    &nbsp; &nbsp; 120 switches per pack
+    </div>
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Add to cart</button>
+  </div>
+
+  <div class="card">
+    <div class="product-title">Cherry MX Black Switches</div>
+      <div class="product-image">
+      <img src="images/cherrymxblack.png" style="width:200px;height: 180px;">
+      </div>
+    <div class="desctext">
+      <ul>
+        <li>Powerful and Direct</li>
+        <li>60cN operating force</li>
+        <li>4mm total travel</li>
+    </ul>
+    &nbsp; &nbsp; 120 switches per pack
+    </div>
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Add to cart</button>
+  </div>
+
+  <div class="card">
+    <div class="product-title">Cherry MX Silver Switches</div>
+      <div class="product-image">
+      <img src="images/cherrymxsilver.png" style="width:200px;height: 180px;">
+      </div>
+    <div class="desctext">
+      <ul>
+        <li>Fast and Direct</li>
+        <li>45cN operating force</li>
+        <li>4mm total travel</li>
+    </ul>
+    &nbsp; &nbsp; 120 switches per pack
+    </div>
+    <form class="form-select">
+        <select id="Ammount" name="ammount" class="select">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        </select>
+    </form>
+    <button class="button button1" onclick="addtocart()">Add to cart</button>
+  
+  </div>
+
+</div>
+
+<script>
+  function addtocart() {
+    alert("Item added to shopping cart :)");
+  }
+</script>
+
+</body>
+</html>
